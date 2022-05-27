@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>王小欣の博客</title>
+  
+  <subtitle>王小欣の博客</subtitle>
+  <link href="https://wangchuaichuai.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://wangchuaichuai.github.io/"/>
+  <updated>2022-05-27T02:27:20.569Z</updated>
+  <id>https://wangchuaichuai.github.io/</id>
+  
+  <author>
+    <name>王小欣</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Error webpack在打包时候报operation not permitted</title>
+    <link href="https://wangchuaichuai.github.io/posts/50206a6.html"/>
+    <id>https://wangchuaichuai.github.io/posts/50206a6.html</id>
+    <published>2022-05-25T02:47:00.000Z</published>
+    <updated>2022-05-27T02:27:20.569Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="webpack在打包时候报这个错：Error-EPERM-operation-not-permitted"><a href="#webpack在打包时候报这个错：Error-EPERM-operation-not-permitted" class="headerlink" title="webpack在打包时候报这个错：Error:EPERM:operation not permitted"></a>webpack在打包时候报这个错：Error:EPERM:operation not permitted</h3><p><a href="https://imgtu.com/i/XFoPDP"><img src="https://s1.ax1x.com/2022/05/25/XFoPDP.png" alt="XFoPDP.png"></a></p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">{</span>  <span class="token comment">// 输出文件设置为名称+hash</span>  <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'js/[name].[hash].js'</span><span class="token punctuation">,</span>  <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">,</span>只需要将<span class="token punctuation">.</span><span class="token punctuation">.</span>去掉或者<span class="token punctuation">.</span>去掉即可解决<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>正确写法</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">{</span>  <span class="token comment">// 输出文件设置为名称+hash</span>  <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'js/[name].[hash].js'</span><span class="token punctuation">,</span>  <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'/dist/'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+    <category term="hooks" scheme="https://wangchuaichuai.github.io/tags/hooks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ErrorFailed to load parser ‘babel-eslint‘ declared</title>
+    <link href="https://wangchuaichuai.github.io/posts/6d39992.html"/>
+    <id>https://wangchuaichuai.github.io/posts/6d39992.html</id>
+    <published>2022-05-25T01:47:00.000Z</published>
+    <updated>2022-05-27T02:27:20.564Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Error-Failed-to-load-parser-‘babel-eslint‘-declared-in-‘node-modules-shallowequal-package-json‘-Ca"><a href="#Error-Failed-to-load-parser-‘babel-eslint‘-declared-in-‘node-modules-shallowequal-package-json‘-Ca" class="headerlink" title="Error: Failed to load parser ‘babel-eslint‘ declared in ‘node_modules/shallowequal/package.json‘: Ca"></a>Error: Failed to load parser ‘babel-eslint‘ declared in ‘node_modules/shallowequal/package.json‘: Ca</h3><p><a href="https://imgtu.com/i/XFHPD1"><img src="https://s1.ax1x.com/2022/05/25/XFHPD1.png" alt="XFHPD1.png"></a><br>只需要手动安装 babel-eslint<br>yarn add  -D babel-eslint后重启vscode即可解决</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+    <category term="hooks" scheme="https://wangchuaichuai.github.io/tags/hooks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>根据页面大小网格布局自适应两行或三行</title>
+    <link href="https://wangchuaichuai.github.io/posts/d18909b7.html"/>
+    <id>https://wangchuaichuai.github.io/posts/d18909b7.html</id>
+    <published>2022-05-13T01:47:00.000Z</published>
+    <updated>2022-05-13T01:57:49.668Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="根据页面大小网格布局自适应两行或三行"><a href="#根据页面大小网格布局自适应两行或三行" class="headerlink" title="根据页面大小网格布局自适应两行或三行"></a>根据页面大小网格布局自适应两行或三行</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>contain1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>contain2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css"><span class="token selector">.item1</span><span class="token punctuation">{</span>    <span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>    <span class="token property">background-color</span><span class="token punctuation">:</span> rebeccapurple<span class="token punctuation">;</span>    <span class="token property">margin-left</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>    <span class="token property">margin-top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">.item</span><span class="token punctuation">{</span>    <span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>    <span class="token property">background-color</span><span class="token punctuation">:</span> aqua<span class="token punctuation">;</span>    <span class="token property">margin-left</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>    <span class="token property">margin-top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span><span class="token punctuation">}</span></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>方法1. 使用@media媒体查询</p><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">// 使用<span class="token atrule"><span class="token rule">@media</span> screen 和<span class="token keyword">and</span>连接其定义的最小或者最大的屏幕尺寸，我这里定义大于1366px现实一行4个，小于1366px一行展示三个，如果需要改变列的话，将属性grid-template-columns改成grid-template-rows@media screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span>0px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>    <span class="token selector">.contain2</span><span class="token punctuation">{</span>        <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>        <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 33.3% 33.3% 33.3%<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token atrule"><span class="token rule">@media</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span>1366px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>    <span class="token selector">.contain2</span><span class="token punctuation">{</span>        <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>        <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 25% 25% 25% 25%<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>方法2. 使用grid属性进行自适应</p><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css"><span class="token selector">// 使用repeat的auto-fill进行自动填充，然后设置每一块的大小，自己计算一下，我这里设定分界点是1366px，如果大于的话，一个item是300px，稍微给多一点设置margin等间隔能显示出来设置为320px即可.contain1</span><span class="token punctuation">{</span>    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token function">repeat</span><span class="token punctuation">(</span>auto-fill<span class="token punctuation">,</span> 320px<span class="token punctuation">)</span><span class="token punctuation">}</span></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+    <category term="hooks" scheme="https://wangchuaichuai.github.io/tags/hooks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在hooks中怎么做类似PureComponent对props的浅比较</title>
+    <link href="https://wangchuaichuai.github.io/posts/3987f34f.html"/>
+    <id>https://wangchuaichuai.github.io/posts/3987f34f.html</id>
+    <published>2022-05-11T07:15:00.000Z</published>
+    <updated>2022-05-11T09:53:38.289Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="在hooks中怎么做类似PureComponent对props的浅比较"><a href="#在hooks中怎么做类似PureComponent对props的浅比较" class="headerlink" title="在hooks中怎么做类似PureComponent对props的浅比较"></a>在hooks中怎么做类似PureComponent对props的浅比较</h3><p>在类组件中使用PureComponent可以对props进行浅比较<br>在函数式组件中使用memo包裹组件，使用useMemo包裹值，使用useCallback包裹方法，少一个都会使缓存的组件进行更新无法起到缓存组件的作用</p><pre class="line-numbers language-react" data-language="react"><code class="language-react">class Demo extends React.PureComponent {// class组件constructor(props) {super(props)this.state = {age: 20}}conponentDidMount() {fetch('xx').then( res =&gt; {if(res) {this.setState({age: res.age})}})}   const setAgeH = () =&gt; {}   const setnameH = () =&gt; {}   const setAgeH = usecallback( () =&gt; {}, [])   const setnameH = usecallback( () =&gt; {}, [])render() {const { age } = this.statereturn &lt;div&gt;&lt;span&gt;年龄&lt;/span&gt;&lt;span&gt;{{age}}&lt;/span&gt;   &lt;/div&gt;}}// hooksconst Age = React.memo(({age,setAge}) =&gt; {return &lt;div&gt;{{age}}&lt;/div&gt;})function Demo() {       useEffect( () =&gt; {               console.log(fetchInfo)           }, [fetchInfo])       const fetchInfo = useCallback ( () =&gt; {               fetch('xxx').then( res =&gt; {                   if(res){                       // setAge(res.age)                       setAge((oldAge) =&gt; {                           return oldAge + res.age                       })                   }               })           }, [name])       return  &lt;div&gt;               &lt;span&gt;年龄&lt;/span&gt;               &lt;span&gt;{{age}}&lt;/span&gt;               &lt;Age age={{age}} setAge={{setAgeH}} /&gt;               &lt;Name name={{name}} setname={{setnameH}} /&gt;               &lt;/div&gt;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+    <category term="hooks" scheme="https://wangchuaichuai.github.io/tags/hooks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react memo 和 react.fc的使用</title>
+    <link href="https://wangchuaichuai.github.io/posts/7fb96dfc.html"/>
+    <id>https://wangchuaichuai.github.io/posts/7fb96dfc.html</id>
+    <published>2022-05-11T07:15:00.000Z</published>
+    <updated>2022-05-11T09:53:38.291Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="react-memo-和-react-fc的使用"><a href="#react-memo-和-react-fc的使用" class="headerlink" title="react memo 和 react.fc的使用"></a>react memo 和 react.fc的使用</h3><p>1.memo<br>介绍：<br>React.memo 为高阶组件。它与 React.PureComponent 非常相似，但它适用于函数组件，但不适用于 class 组件。<br>如果你的函数组件在给定相同 props 的情况下渲染相同的结果，那么你可以通过将其包装在 React.memo 中调用，以此通过记忆组件渲染结果的方式来提高组件的性能表现。这意味着在这种情况下，React 将跳过渲染组件的操作并直接复用最近一次渲染的结果。<br>React.memo 仅检查 props 变更。如果函数组件被 React.memo 包裹，且其实现中拥有 useState 或 useContext 的 Hook，当 context 发生变化时，它仍会重新渲染。<br>默认情况下其只会对复杂对象做浅层对比，如果你想要控制对比过程，那么请将自定义的比较函数通过第二个参数传入来实现。</p><pre class="line-numbers language-react" data-language="react"><code class="language-react">const comp = () =&gt; {return &lt;div&gt;1&lt;/div&gt;}export default React.memo(comp)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>总结：包裹函数组件 避免相同prop下的重复渲染，以达到优化效果</p><p>2.React.FC<br>介绍：</p><p>1.React.FC是函数式组件，是在TypeScript使用的一个泛型，FC就是FunctionComponent的缩写，事实上React.FC可以写成React.FunctionComponent：</p><pre class="line-numbers language-react" data-language="react"><code class="language-react">const App: React.FunctionComponent&lt;{ message: string }&gt; = ({ message }) =&gt; (  &lt;div&gt;{message}&lt;/div&gt;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>2.React.FC 包含了 PropsWithChildren 的泛型，不用显式的声明 props.children 的类型。React.FC&lt;&gt; 对于返回类型是显式的，而普通函数版本是隐式的（否则需要附加注释）。<br>3.React.FC提供了类型检查和自动完成的静态属性：displayName，propTypes和defaultProps（注意：defaultProps与React.FC结合使用会存在一些问题）。</p><p>```react<br>interface IProps {<br>    name: string<br>    phone: number<br>}<br>const App: React.FC<iprops> = (props: PropsWithChildren<iprops>) =&gt; {<br>    const { name, phone } = props<br>    return </iprops></iprops></p><div>{ name }</div><br>}<p></p><p>使用：<br>总结：React.FC 表示使用类型检查并且表示是函数式组件</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+    <category term="hooks" scheme="https://wangchuaichuai.github.io/tags/hooks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>useEffect使用定时器出现重复问题</title>
+    <link href="https://wangchuaichuai.github.io/posts/1e589684.html"/>
+    <id>https://wangchuaichuai.github.io/posts/1e589684.html</id>
+    <published>2022-05-08T07:15:00.000Z</published>
+    <updated>2022-05-08T07:20:17.612Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="useEffect使用定时器出现重复问题"><a href="#useEffect使用定时器出现重复问题" class="headerlink" title="useEffect使用定时器出现重复问题"></a>useEffect使用定时器出现重复问题</h3><p>react中设置定时器，最后需要将定时器清理，否则下次会出现多次调用的问题<br>使用useEffect来模拟componentWillUnmount生命周期来进行</p><pre class="line-numbers language-react" data-language="react"><code class="language-react">function Timer() {    let [time, setTime] = useState(5);    useEffect(() =&gt; {        let timer = setInterval(() =&gt; {          setTime(time - 1);        }, 1000)        return () =&gt; clearInterval(timer);    }, );    return &lt;div&gt;{time}&lt;/div&gt;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+    <category term="hooks" scheme="https://wangchuaichuai.github.io/tags/hooks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React中useState两次渲染</title>
+    <link href="https://wangchuaichuai.github.io/posts/6556e27c.html"/>
+    <id>https://wangchuaichuai.github.io/posts/6556e27c.html</id>
+    <published>2022-05-07T08:37:00.000Z</published>
+    <updated>2022-05-07T10:12:13.660Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="React中useState两次渲染"><a href="#React中useState两次渲染" class="headerlink" title="React中useState两次渲染"></a>React中useState两次渲染</h3><p>函数式组件使用useState后，console.log打印组件重复渲染<br>问题<br>  index.tsx中的&lt;React.StrictMode&gt;的问题</p><pre class="line-numbers language-react" data-language="react"><code class="language-react">ReactDOM.render(&lt;React.StrictMode&gt;&lt;App /&gt;&lt;/React.StrictMode&gt;document.getElementById('ROOT'))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在生产模式下不会出现此问题<br>StrictMode有助于</p><ul><li>识别不安全的生命周期</li><li>关于使用过字符串 ref API的警告</li><li>关于使用废弃的findDOMNode方法的警告</li><li>监测意外的副作用</li><li>监测过时的context API</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+    <category term="hooks" scheme="https://wangchuaichuai.github.io/tags/hooks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Yarn创建React项目遇到的问题</title>
+    <link href="https://wangchuaichuai.github.io/posts/7e5ed880.html"/>
+    <id>https://wangchuaichuai.github.io/posts/7e5ed880.html</id>
+    <published>2022-05-06T08:37:00.000Z</published>
+    <updated>2022-05-07T10:12:13.662Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="使用Yarn创建React项目遇到的问题"><a href="#使用Yarn创建React项目遇到的问题" class="headerlink" title="使用Yarn创建React项目遇到的问题"></a>使用Yarn创建React项目遇到的问题</h3><pre class="line-numbers language-react" data-language="react"><code class="language-react">yarn create react-app antd-demoyarn create v1.17.3[1/4] Resolving packages...[2/4] Fetching packages...[3/4] Linking dependencies...[4/4] Building fresh packages...success Installed "create-react-app@3.1.1" with binaries:      - create-react-app[############################################################################################] 92/92Creating a new React app in H:\React\demo.Installing packages. This might take a couple of minutes.Installing react, react-dom, and react-scripts...yarn add v1.17.3info No lockfile found.[1/4] Resolving packages...[2/4] Fetching packages...error eslint@6.2.2: The engine "node" is incompatible with this module. Expected version "^8.10.0 || ^10.13.0 || &gt;=11.10.1". Got "10.8.0"error Found incompatible module.info Visit https://yarnpkg.com/en/docs/cli/add for documentation about this command.Aborting installation.  yarnpkg add --exact react react-dom react-scripts --cwd H:\React\antd-demo has failed.Deleting generated file... package.jsonDeleting antd-demo/ from H:\ReactDone.error Command failed.Exit code: 1Command: C:\Users\YWL\AppData\Local\Yarn\bin\create-react-appArguments: antd-demoDirectory: H:\ReactOutput:info Visit https://yarnpkg.com/en/docs/cli/create for documentation about this command.PS H:\React&gt; yarn startyarn run v1.17.3error Couldn't find a package.json file in "H:\\React"info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>解决</p><pre class="line-numbers language-none"><code class="language-none">yarn config set ignore-engines true<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react报错 Can&#39;t perform a React state update on an unmounted component</title>
+    <link href="https://wangchuaichuai.github.io/posts/3b89b733.html"/>
+    <id>https://wangchuaichuai.github.io/posts/3b89b733.html</id>
+    <published>2022-05-02T08:37:00.000Z</published>
+    <updated>2022-05-27T02:23:13.732Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="react报错：Can’t-perform-a-React-state-update-on-an-unmounted-component"><a href="#react报错：Can’t-perform-a-React-state-update-on-an-unmounted-component" class="headerlink" title="react报错：Can’t perform a React state update on an unmounted component"></a>react报错：Can’t perform a React state update on an unmounted component</h3><p>在React开发中，我们经常可能会遇到这样一个警告：</p><pre class="line-numbers language-error" data-language="error"><code class="language-error">ERROR: Can't perform a React state update on an unmounted componentThis is a no-op, but it indicates a memory leak in your application.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>我们不能在组件销毁后设置state，防止内存泄漏<br>关于react中切换路由时报以上错误，实际的原因是因为在组件挂载（mounted）之后进行了异步操作，比如ajax请求或者设置了定时器等，而你在callback中进行了setState操作。当你切换路由时，组件已经被卸载（unmounted）了，此时异步操作中callback还在执行，因此setState没有得到值。</p><p>解决的方式有两种：</p><p>一、在卸载的时候对所有的操作进行清除（例如：清除定时器）</p><pre class="line-numbers language-react" data-language="react"><code class="language-react">componentDidMount = () =&gt; {timer = setTimeout( () =&gt; {}, 1000)}componentWillUnMount = () =&gt; {clearTimeout(timer)}// hooks中使用useeffect模拟生命周期<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>二、设置一个flag，当unmount的时候重置这个flag</p><pre class="line-numbers language-react" data-language="react"><code class="language-react">componentDidMount =() =&gt; {this.flag = trueaxios操作}componentWillUnMount =() =&gt; {this.flag = false}// hooks中使用useeffect模拟生命周期<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>三、最简单的方式（万金油）</p><pre class="line-numbers language-react" data-language="react"><code class="language-react">componentDidMount =() =&gt; {axios请求}componentWillUnmount =() =&gt; {this.setState = (state, callback) =&gt; {return;}}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>typescript使用可选属性报错可能未定义</title>
+    <link href="https://wangchuaichuai.github.io/posts/57632486.html"/>
+    <id>https://wangchuaichuai.github.io/posts/57632486.html</id>
+    <published>2022-05-01T03:37:00.000Z</published>
+    <updated>2022-05-02T14:31:07.935Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="typescript使用可选属性报错可能未定义"><a href="#typescript使用可选属性报错可能未定义" class="headerlink" title="typescript使用可选属性报错可能未定义"></a>typescript使用可选属性报错可能未定义</h3><p>当使用可选属性的时候，可能会报参数未定义的错误</p><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">interface</span> <span class="token class-name">Info</span><span class="token punctuation">{</span>user<span class="token operator">:</span><span class="token builtin">string</span>name<span class="token operator">:</span><span class="token operator">?</span><span class="token builtin">string</span>password<span class="token operator">:</span><span class="token operator">?</span><span class="token builtin">string</span><span class="token punctuation">}</span><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">UserInfo</span> <span class="token operator">=</span> <span class="token punctuation">(</span> state <span class="token operator">=</span> defaultState<span class="token punctuation">,</span> action<span class="token operator">:</span> Info<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token keyword">switch</span><span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">case</span><span class="token operator">:</span><span class="token number">1</span> <span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token operator">...</span>state<span class="token punctuation">}</span><span class="token keyword">case</span><span class="token operator">:</span><span class="token number">2</span> <span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token operator">...</span>state<span class="token punctuation">}</span><span class="token keyword">default</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token operator">...</span>state<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>解决：<br>将tsconfig.json中的strict属性设置为false，取消严格模式即可</p><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token property">"strict"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="typescript" scheme="https://wangchuaichuai.github.io/tags/typescript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端进行下载图片</title>
+    <link href="https://wangchuaichuai.github.io/posts/b3977ed7.html"/>
+    <id>https://wangchuaichuai.github.io/posts/b3977ed7.html</id>
+    <published>2022-03-21T13:37:00.000Z</published>
+    <updated>2022-03-22T09:55:33.110Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="前端进行下载图片"><a href="#前端进行下载图片" class="headerlink" title="前端进行下载图片"></a>前端进行下载图片</h3><ol><li>同源情况</li></ol><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">// 这种情况下必须是同源，否则download则会失效<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>你的图片的地址<span class="token punctuation">"</span></span> <span class="token attr-name">download</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>名字<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>下载图片<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ol start="2"><li>非同源情况</li></ol><p>原理类似，不过利用canvas来进行画图</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">getIt</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">,</span><span class="token literal-property property">src</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>   <span class="token keyword">let</span> src <span class="token operator">=</span> src   <span class="token keyword">let</span> canvas <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'canvas'</span><span class="token punctuation">)</span>   <span class="token keyword">let</span> image <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span>   image<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">'crossOrigin'</span><span class="token punctuation">,</span> <span class="token string">'anonymous'</span><span class="token punctuation">)</span>   image<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>     canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> image<span class="token punctuation">.</span>width     canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> image<span class="token punctuation">.</span>height     <span class="token keyword">let</span> context <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span>     context<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>image<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> image<span class="token punctuation">.</span>width<span class="token punctuation">,</span> image<span class="token punctuation">.</span>height<span class="token punctuation">)</span>     canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>image<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> image<span class="token punctuation">.</span>width<span class="token punctuation">,</span> image<span class="token punctuation">.</span>height<span class="token punctuation">)</span>     <span class="token comment">//   const url = canvas.toDataURL('image/png')</span>     canvas<span class="token punctuation">.</span><span class="token function">toBlob</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">blob</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>       <span class="token keyword">let</span> link <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>       link<span class="token punctuation">.</span>href <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>blob<span class="token punctuation">)</span>       link<span class="token punctuation">.</span>download <span class="token operator">=</span> <span class="token string">'fileName'</span>       link<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token punctuation">}</span><span class="token punctuation">)</span>   <span class="token punctuation">}</span>   image<span class="token punctuation">.</span>src <span class="token operator">=</span> src <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React useNavigate 和 useLocation的使用</title>
+    <link href="https://wangchuaichuai.github.io/posts/e78137ec.html"/>
+    <id>https://wangchuaichuai.github.io/posts/e78137ec.html</id>
+    <published>2022-03-18T03:37:00.000Z</published>
+    <updated>2022-03-22T09:55:33.107Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="React-useNavigate-和-useLocation的使用"><a href="#React-useNavigate-和-useLocation的使用" class="headerlink" title="React useNavigate 和 useLocation的使用"></a>React useNavigate 和 useLocation的使用</h3><p>使用useNavigate来跳转，在页面内使用useLocation来接收数据</p><pre class="line-numbers language-react" data-language="react"><code class="language-react">// 发送import { useNavigate } from 'react-router-dom'let navigate = useNavigate()function post() {let name = 'hello'let psw = 123123navigate('name',{state: {name: name,psw: psw}})}// 接收import { useLocation } from 'react-router-dom'let localtion = useNavigate()const { state1 } = localtionconst   state2   = localtion.state// 均能获取数据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>useSelector与useDispatch</title>
+    <link href="https://wangchuaichuai.github.io/posts/65b0b16f.html"/>
+    <id>https://wangchuaichuai.github.io/posts/65b0b16f.html</id>
+    <published>2022-03-17T03:37:00.000Z</published>
+    <updated>2022-03-22T09:55:33.108Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="useSelector与useDispatch"><a href="#useSelector与useDispatch" class="headerlink" title="useSelector与useDispatch"></a>useSelector与useDispatch</h3><p>在hooks中替代connect来连接react和redux的方式是用useDispatch和useSelector，就无需使用connect的一堆模式化的语法了<br><a href="https://imgtu.com/i/qM4IUJ"><img src="https://s1.ax1x.com/2022/03/22/qM4IUJ.png" alt="qM4IUJ.png"></a><br>useSelector和mapStateToProps效果类型，是用来get数据的，但是使用起来异常简介<br>有两个参数，第一个传入一个函数，返回一个对象，对象里面可以获取到store中的数据，第二个值是对性能优化的，传入的值来判断true or false来决定是否重新渲染，类似React.memo的第二个参数，进行一次浅比较</p><p>useDispatch则是用来dispatch一个action的，如上图创建后直接在括号中写入要dispatch的action即可</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> dispatch <span class="token operator">=</span> <span class="token function">useDispatch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token function">dispatch</span><span class="token punctuation">(</span>action<span class="token punctuation">.</span><span class="token function">login</span><span class="token punctuation">(</span>name<span class="token operator">:</span>string<span class="token punctuation">,</span><span class="token literal-property property">psw</span><span class="token operator">:</span>string<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>这样即可dispatch成功</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React报错 TypeError Cannot call a class as a function</title>
+    <link href="https://wangchuaichuai.github.io/posts/f450a672.html"/>
+    <id>https://wangchuaichuai.github.io/posts/f450a672.html</id>
+    <published>2022-03-14T03:37:00.000Z</published>
+    <updated>2022-05-27T02:34:53.208Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="React报错：TypeError-Cannot-call-a-class-as-a-function"><a href="#React报错：TypeError-Cannot-call-a-class-as-a-function" class="headerlink" title="React报错：TypeError: Cannot call a class as a function"></a>React报错：TypeError: Cannot call a class as a function</h3><p>极其极其不小心的错误，redux-thunk异步组件的引入是引入redux-thunk而不是引入react-thunk，否则代码不会报错反而代码写完后运行报错</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Echarts不显示</title>
+    <link href="https://wangchuaichuai.github.io/posts/676031c.html"/>
+    <id>https://wangchuaichuai.github.io/posts/676031c.html</id>
+    <published>2022-03-13T03:37:00.000Z</published>
+    <updated>2022-03-22T09:55:33.101Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Echarts不显示"><a href="#Echarts不显示" class="headerlink" title="Echarts不显示"></a>Echarts不显示</h3><p>在完成加入echarts后的网页中虽然能查看到元素节点，但是并没有显示出来，原因是因为没有给标签高度，可以给标签高度或者给创建的ECharts元素加size属性</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> myChart <span class="token operator">=</span> echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">)</span>myChart<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">height</span><span class="token operator">:</span><span class="token string">'100px'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>这样就能正常显示了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Echarts Initialize failed invalid dom 根本解决</title>
+    <link href="https://wangchuaichuai.github.io/posts/651e55e3.html"/>
+    <id>https://wangchuaichuai.github.io/posts/651e55e3.html</id>
+    <published>2022-03-13T03:37:00.000Z</published>
+    <updated>2022-03-22T09:55:33.105Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Echarts在渲染时出错Uncaught-Error-Initialize-failed-invalid-dom"><a href="#Echarts在渲染时出错Uncaught-Error-Initialize-failed-invalid-dom" class="headerlink" title="Echarts在渲染时出错Uncaught Error: Initialize failed: invalid dom"></a>Echarts在渲染时出错Uncaught Error: Initialize failed: invalid dom</h3><p>其原因是因为dom还没有渲染完就开始ECharts的初始化（init）操作</p><p>解决<br>react：可以将其放在useEffect函数中，在结构全部渲染完毕之后再进行ECharts的渲染操作</p><p><a href="https://imgtu.com/i/qMftIA"><img src="https://s1.ax1x.com/2022/03/22/qMftIA.png" alt="qMftIA.png"></a></p><p>vue：使用ref来解决，使用this.$ref来获取对应的标签而不是用getELementById</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="React" scheme="https://wangchuaichuai.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>process.env.NODE_ENV === &#39;production&#39; 总是为false或无法使用该命令</title>
+    <link href="https://wangchuaichuai.github.io/posts/8f8d86be.html"/>
+    <id>https://wangchuaichuai.github.io/posts/8f8d86be.html</id>
+    <published>2022-03-09T16:00:00.000Z</published>
+    <updated>2022-03-14T12:40:03.291Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="vue当文字很多的时候使用…代替"><a href="#vue当文字很多的时候使用…代替" class="headerlink" title="vue当文字很多的时候使用…代替"></a>vue当文字很多的时候使用…代替</h3><p>原本的配置是</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// linux或者mac</span><span class="token string-property property">"serve"</span><span class="token operator">:</span><span class="token string">"NODE_ENV=production node app.js"</span><span class="token comment">// windows</span><span class="token string-property property">"serve"</span><span class="token operator">:</span><span class="token string">"SET NODE_ENV=production &amp;&amp; node app.js"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>而console.log一下命令发现始终为false，无法转为生产环境<br>而在打印出的情况下发现production的签名是有一个空格的，问题根本发现，是在命令中输入空格的时候不会自动省略而是也把他加入到了执行的命令中，而他又判断production和空格+production不一致所以始终为false<br>所以</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token string-property property">"serve"</span><span class="token operator">:</span><span class="token string">"SET NODE_ENV=production&amp;&amp; node app.js"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>还要注意一点在windows下使用scripty来管理命令的时候是.bat后缀而不是linux下的.sh后缀</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+    <category term="vue" scheme="https://wangchuaichuai.github.io/tags/vue/"/>
+    
+    <category term="JS" scheme="https://wangchuaichuai.github.io/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>样式中隐藏滚动条</title>
+    <link href="https://wangchuaichuai.github.io/posts/22f4609d.html"/>
+    <id>https://wangchuaichuai.github.io/posts/22f4609d.html</id>
+    <published>2022-03-08T06:24:00.000Z</published>
+    <updated>2022-03-14T12:48:46.294Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="样式中隐藏滚动条"><a href="#样式中隐藏滚动条" class="headerlink" title="样式中隐藏滚动条"></a>样式中隐藏滚动条</h3><p>项目中有一个长页面，而内部内容多则会撑开组件的长度，此时会出现滚动条，而有时候这个滚动条会特别难看，需要有一个隐藏滚动条的操作。</p><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">// 适用于chrom内核与safari环境下.box::-webkit-scrollbar</span> <span class="token punctuation">{</span><span class="token property">display</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">// 适用于IE10或以上.box</span><span class="token punctuation">{</span><span class="token property">-ms-overflow-style</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">// 适用于firefox.box</span><span class="token punctuation">{</span><span class="token property">overflow</span><span class="token punctuation">:</span>-moz-scrollbars-none<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>如果不是这些环境的话，只需要设置其滚动条所在的高度比你容器的高度大即可，这样就能把滚动条所在的位置挤出去完成界面上的’隐藏滚动条’</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="学习篇" scheme="https://wangchuaichuai.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AF%87/"/>
+    
+    
+    <category term="vue" scheme="https://wangchuaichuai.github.io/tags/vue/"/>
+    
+    <category term="axios" scheme="https://wangchuaichuai.github.io/tags/axios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Can&#39;t perform a React state update on an unmounted component. This is a no-</title>
+    <link href="https://wangchuaichuai.github.io/posts/da69ad47.html"/>
+    <id>https://wangchuaichuai.github.io/posts/da69ad47.html</id>
+    <published>2022-03-05T06:24:00.000Z</published>
+    <updated>2022-03-14T12:48:46.293Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Warning-Can’t-perform-a-React-state-update-on-an-unmounted-component-This-is-a-no"><a href="#Warning-Can’t-perform-a-React-state-update-on-an-unmounted-component-This-is-a-no" class="headerlink" title="Warning: Can’t perform a React state update on an unmounted component. This is a no-"></a>Warning: Can’t perform a React state update on an unmounted component. This is a no-</h3><p>react报错<br><a href="https://imgtu.com/i/bXy95n"><img src="https://s1.ax1x.com/2022/03/14/bXy95n.png" alt="bXy95n.png"></a><br>其根本是原因是在组件销毁后异步操作还没有完成，但是组件又销毁了而出现的问题。<br>解决方法：最简单的就是将其放置在WillUnmount中防止销毁后依旧调用</p><pre class="line-numbers language-react" data-language="react"><code class="language-react">componentDidMount = () =&gt; {axios操作.then( res =&gt; {this.setState({设置值})})}componentWillUnmount(){this.setState = (state, callback) =&gt; {return ;}}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>即可解决报错</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="学习篇" scheme="https://wangchuaichuai.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AF%87/"/>
+    
+    
+    <category term="react" scheme="https://wangchuaichuai.github.io/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>forEach和for的return</title>
+    <link href="https://wangchuaichuai.github.io/posts/dea3fb4f.html"/>
+    <id>https://wangchuaichuai.github.io/posts/dea3fb4f.html</id>
+    <published>2022-03-02T02:04:00.000Z</published>
+    <updated>2022-03-02T02:04:45.304Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="记一次小结"><a href="#记一次小结" class="headerlink" title="记一次小结"></a>记一次小结</h4><p>在forEach循环中使用return会跳出本次循环然后进行下一次<br>在for中使用return会直接结束循环</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">,</span> <span class="token string">'3'</span><span class="token punctuation">]</span>arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span> <span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'forEach'</span><span class="token punctuation">,</span> item<span class="token punctuation">)</span>    <span class="token keyword">return</span> item<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token keyword">for</span><span class="token punctuation">(</span> <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'for'</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token number">1</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="学习篇" scheme="https://wangchuaichuai.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AF%87/"/>
+    
+    
+    <category term="JavaScript" scheme="https://wangchuaichuai.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+</feed>
