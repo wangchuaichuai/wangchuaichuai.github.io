@@ -6,7 +6,7 @@
   <link href="https://wangchuaichuai.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangchuaichuai.github.io/"/>
-  <updated>2022-05-27T02:27:20.569Z</updated>
+  <updated>2022-06-06T07:36:56.501Z</updated>
   <id>https://wangchuaichuai.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>css实现图片无限旋转</title>
+    <link href="https://wangchuaichuai.github.io/posts/45451bcc.html"/>
+    <id>https://wangchuaichuai.github.io/posts/45451bcc.html</id>
+    <published>2022-06-06T04:37:00.000Z</published>
+    <updated>2022-06-06T07:36:56.501Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="css实现图片无限旋转"><a href="#css实现图片无限旋转" class="headerlink" title="css实现图片无限旋转"></a>css实现图片无限旋转</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>/路径<span class="token punctuation">'</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.imgs</span><span class="token punctuation">{</span><span class="token property">-webkit-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span><span class="token property">-moz-animation</span><span class="token punctuation">:</span> rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span><span class="token property">-ms-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span><span class="token property">animation</span><span class="token punctuation">:</span> rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span><span class="token property">-moz-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span><span class="token property">-webkit-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span><span class="token property">-o-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span><span class="token property">-ms-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span><span class="token property">animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token atrule"><span class="token rule">@-webkit-keyframes</span> rotateVbtn1</span> <span class="token punctuation">{</span><span class="token selector">//重复旋转45度，更改成360即可重复旋转0%</span> <span class="token punctuation">{</span><span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-moz-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-ms-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-o-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">100%</span> <span class="token punctuation">{</span><span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-moz-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-ms-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-o-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    <category term="学习篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/%E5%AD%A6%E4%B9%A0%E7%AF%87/"/>
+    
+    
+    <category term="css" scheme="https://wangchuaichuai.github.io/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>Error webpack在打包时候报operation not permitted</title>
@@ -487,30 +513,6 @@
     
     
     <category term="react" scheme="https://wangchuaichuai.github.io/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>forEach和for的return</title>
-    <link href="https://wangchuaichuai.github.io/posts/dea3fb4f.html"/>
-    <id>https://wangchuaichuai.github.io/posts/dea3fb4f.html</id>
-    <published>2022-03-02T02:04:00.000Z</published>
-    <updated>2022-03-02T02:04:45.304Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="记一次小结"><a href="#记一次小结" class="headerlink" title="记一次小结"></a>记一次小结</h4><p>在forEach循环中使用return会跳出本次循环然后进行下一次<br>在for中使用return会直接结束循环</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">,</span> <span class="token string">'3'</span><span class="token punctuation">]</span>arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span> <span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'forEach'</span><span class="token punctuation">,</span> item<span class="token punctuation">)</span>    <span class="token keyword">return</span> item<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token keyword">for</span><span class="token punctuation">(</span> <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'for'</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token number">1</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="学习篇" scheme="https://wangchuaichuai.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AF%87/"/>
-    
-    
-    <category term="JavaScript" scheme="https://wangchuaichuai.github.io/tags/JavaScript/"/>
     
   </entry>
   
