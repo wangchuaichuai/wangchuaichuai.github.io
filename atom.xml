@@ -47,11 +47,37 @@
   </entry>
   
   <entry>
+    <title>使用bcryptjs对nest中的密码进行加密</title>
+    <link href="https://wangchuaichuai.github.io/posts/a0db594.html"/>
+    <id>https://wangchuaichuai.github.io/posts/a0db594.html</id>
+    <published>2022-06-06T04:37:00.000Z</published>
+    <updated>2022-06-29T11:30:26.951Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="使用bcryptjs对nest中的密码进行加密"><a href="#使用bcryptjs对nest中的密码进行加密" class="headerlink" title="使用bcryptjs对nest中的密码进行加密"></a>使用bcryptjs对nest中的密码进行加密</h3><p>密码不能以明文形式保存到数据库中，否则数据泄露密码就会被知道。而一般的加密方式由于加密规则固定，很容易被破解，安全系数不高。密码加盐的加密方式，能很好的解决这一点。解决字典攻击的方式 是加盐。</p><p>1.bcryptjs是nodejs中比较好的一款加盐(salt)加密的包.<br>2.所谓加盐.就是系统生成一串随机值,然后混入原始密码中,然后按照加密方式生成一串字符串保存在服务器。<br>3.安装</p><pre class="line-numbers language-none"><code class="language-none">npm install bcryptjsyarn add bcryptjscnpm install bcryptjs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>4.使用</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/** * bcryptjs  加密 */</span><span class="token keyword">const</span> bcryptjs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'bcryptjs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> password <span class="token operator">=</span> <span class="token string">'123456789'</span><span class="token punctuation">;</span><span class="token comment">/** * 加密处理 - 同步方法 * bcryptjs.hashSync(data, salt) *    - data  要加密的数据 *    - slat  用于哈希密码的盐。如果指定为数字，则将使用指定的轮数生成盐并将其使用。推荐 10 */</span><span class="token keyword">let</span> hashPassword<span class="token operator">=</span>bcryptjs<span class="token punctuation">.</span><span class="token function">hashSync</span><span class="token punctuation">(</span>password<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hasPwd<span class="token punctuation">)</span> <span class="token comment">// $2a$10$y5WA7lOVpzxVh.pqK3kUzOFZaJZXUMutvb3EG0qocgRxGcKQG36ou</span><span class="token comment">/** * 校验 - 使用同步方法 * bcryptjs.compareSync(data, encrypted) *    - data        要比较的数据, 使用登录时传递过来的密码 *    - encrypted   要比较的数据, 使用从数据库中查询出来的加密过的密码 */</span><span class="token keyword">let</span> comparePwd<span class="token operator">=</span>bcryptjs<span class="token punctuation">.</span><span class="token function">compareSync</span><span class="token punctuation">(</span>password<span class="token punctuation">,</span>hashPassword<span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>comparePwd<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span><span class="token keyword">let</span> comparePwd<span class="token operator">=</span>bcryptjs<span class="token punctuation">.</span><span class="token function">compareSync</span><span class="token punctuation">(</span>password<span class="token punctuation">,</span><span class="token string">'123456'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>comparePwd<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    <category term="学习篇" scheme="https://wangchuaichuai.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/%E5%AD%A6%E4%B9%A0%E7%AF%87/"/>
+    
+    
+    <category term="css" scheme="https://wangchuaichuai.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
     <title>css实现图片无限旋转</title>
     <link href="https://wangchuaichuai.github.io/posts/cbf7cc1c.html"/>
     <id>https://wangchuaichuai.github.io/posts/cbf7cc1c.html</id>
     <published>2022-06-06T04:37:00.000Z</published>
-    <updated>2022-06-23T01:10:46.278Z</updated>
+    <updated>2022-06-23T01:11:27.137Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="css实现图片无限旋转"><a href="#css实现图片无限旋转" class="headerlink" title="css实现图片无限旋转"></a>css实现图片无限旋转</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>/路径<span class="token punctuation">'</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.imgs</span><span class="token punctuation">{</span><span class="token property">-webkit-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span><span class="token property">-moz-animation</span><span class="token punctuation">:</span> rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span><span class="token property">-ms-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span><span class="token property">animation</span><span class="token punctuation">:</span> rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span><span class="token property">-moz-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span><span class="token property">-webkit-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span><span class="token property">-o-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span><span class="token property">-ms-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span><span class="token property">animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token atrule"><span class="token rule">@-webkit-keyframes</span> rotateVbtn1</span> <span class="token punctuation">{</span><span class="token selector">//重复旋转45度，更改成360即可重复旋转0%</span> <span class="token punctuation">{</span><span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-moz-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-ms-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-o-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">100%</span> <span class="token punctuation">{</span><span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-moz-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-ms-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">-o-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
     
@@ -493,32 +519,6 @@
     <category term="vue" scheme="https://wangchuaichuai.github.io/tags/vue/"/>
     
     <category term="JS" scheme="https://wangchuaichuai.github.io/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>样式中隐藏滚动条</title>
-    <link href="https://wangchuaichuai.github.io/posts/22f4609d.html"/>
-    <id>https://wangchuaichuai.github.io/posts/22f4609d.html</id>
-    <published>2022-03-08T06:24:00.000Z</published>
-    <updated>2022-03-14T12:48:46.294Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="样式中隐藏滚动条"><a href="#样式中隐藏滚动条" class="headerlink" title="样式中隐藏滚动条"></a>样式中隐藏滚动条</h3><p>项目中有一个长页面，而内部内容多则会撑开组件的长度，此时会出现滚动条，而有时候这个滚动条会特别难看，需要有一个隐藏滚动条的操作。</p><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">// 适用于chrom内核与safari环境下.box::-webkit-scrollbar</span> <span class="token punctuation">{</span><span class="token property">display</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">// 适用于IE10或以上.box</span><span class="token punctuation">{</span><span class="token property">-ms-overflow-style</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">// 适用于firefox.box</span><span class="token punctuation">{</span><span class="token property">overflow</span><span class="token punctuation">:</span>-moz-scrollbars-none<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>如果不是这些环境的话，只需要设置其滚动条所在的高度比你容器的高度大即可，这样就能把滚动条所在的位置挤出去完成界面上的’隐藏滚动条’</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="学习篇" scheme="https://wangchuaichuai.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AF%87/"/>
-    
-    
-    <category term="vue" scheme="https://wangchuaichuai.github.io/tags/vue/"/>
-    
-    <category term="axios" scheme="https://wangchuaichuai.github.io/tags/axios/"/>
     
   </entry>
   

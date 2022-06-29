@@ -35,6 +35,33 @@
     
     
     <entry>
+      <title>使用bcryptjs对nest中的密码进行加密</title>
+      <link href="/posts/a0db594.html"/>
+      <url>/posts/a0db594.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="使用bcryptjs对nest中的密码进行加密"><a href="#使用bcryptjs对nest中的密码进行加密" class="headerlink" title="使用bcryptjs对nest中的密码进行加密"></a>使用bcryptjs对nest中的密码进行加密</h3><p>密码不能以明文形式保存到数据库中，否则数据泄露密码就会被知道。而一般的加密方式由于加密规则固定，很容易被破解，安全系数不高。密码加盐的加密方式，能很好的解决这一点。解决字典攻击的方式 是加盐。</p><p>1.bcryptjs是nodejs中比较好的一款加盐(salt)加密的包.<br>2.所谓加盐.就是系统生成一串随机值,然后混入原始密码中,然后按照加密方式生成一串字符串保存在服务器。<br>3.安装</p><pre class="line-numbers language-none"><code class="language-none">npm install bcryptjsyarn add bcryptjscnpm install bcryptjs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>4.使用</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/** * bcryptjs  加密 */</span><span class="token keyword">const</span> bcryptjs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'bcryptjs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> password <span class="token operator">=</span> <span class="token string">'123456789'</span><span class="token punctuation">;</span><span class="token comment">/** * 加密处理 - 同步方法 * bcryptjs.hashSync(data, salt) *    - data  要加密的数据 *    - slat  用于哈希密码的盐。如果指定为数字，则将使用指定的轮数生成盐并将其使用。推荐 10 */</span><span class="token keyword">let</span> hashPassword<span class="token operator">=</span>bcryptjs<span class="token punctuation">.</span><span class="token function">hashSync</span><span class="token punctuation">(</span>password<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hasPwd<span class="token punctuation">)</span> <span class="token comment">// $2a$10$y5WA7lOVpzxVh.pqK3kUzOFZaJZXUMutvb3EG0qocgRxGcKQG36ou</span><span class="token comment">/** * 校验 - 使用同步方法 * bcryptjs.compareSync(data, encrypted) *    - data        要比较的数据, 使用登录时传递过来的密码 *    - encrypted   要比较的数据, 使用从数据库中查询出来的加密过的密码 */</span><span class="token keyword">let</span> comparePwd<span class="token operator">=</span>bcryptjs<span class="token punctuation">.</span><span class="token function">compareSync</span><span class="token punctuation">(</span>password<span class="token punctuation">,</span>hashPassword<span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>comparePwd<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span><span class="token keyword">let</span> comparePwd<span class="token operator">=</span>bcryptjs<span class="token punctuation">.</span><span class="token function">compareSync</span><span class="token punctuation">(</span>password<span class="token punctuation">,</span><span class="token string">'123456'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>comparePwd<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术篇 </category>
+          
+          <category> 学习篇 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>css实现图片无限旋转</title>
       <link href="/posts/cbf7cc1c.html"/>
       <url>/posts/cbf7cc1c.html</url>

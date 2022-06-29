@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="css实现图片无限旋转, 王欣 计算机 前端技术 嵌入式">
+    <meta name="keywords" content="使用bcryptjs对nest中的密码进行加密, 王欣 计算机 前端技术 嵌入式">
     <meta name="description" content="本科 | 软件工程 | 嵌入式开发及前端开发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>css实现图片无限旋转 | 王小欣の博客</title>
+    <title>使用bcryptjs对nest中的密码进行加密 | 王小欣の博客</title>
 
     <link rel="icon" type="image/jpeg" href="https://s1.ax1x.com/2022/05/26/XVsMSx.jpg">
 
@@ -488,12 +488,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://8.142.84.52:5055/public/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://8.142.84.52:5055/public/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">css实现图片无限旋转</h1>
+                    <h1 class="description center-align post-title">使用bcryptjs对nest中的密码进行加密</h1>
                 </div>
             </div>
         </div>
@@ -650,14 +650,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-23
+                    2022-06-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    139
+                    331
                 </div>
                 
 
@@ -687,36 +687,41 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="css实现图片无限旋转"><a href="#css实现图片无限旋转" class="headerlink" title="css实现图片无限旋转"></a>css实现图片无限旋转</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>/路径<span class="token punctuation">'</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.imgs</span><span class="token punctuation">{</span>
-		<span class="token property">-webkit-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span>
-		<span class="token property">-moz-animation</span><span class="token punctuation">:</span> rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span>
-		<span class="token property">-ms-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span>
-		<span class="token property">animation</span><span class="token punctuation">:</span> rotateVbtn 5s linear infinite 800ms 0 ease<span class="token punctuation">;</span>
-		<span class="token property">-moz-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span>
-		<span class="token property">-webkit-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span>
-		<span class="token property">-o-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span>
-		<span class="token property">-ms-animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span>
-		<span class="token property">animation</span><span class="token punctuation">:</span>rotateVbtn 5s linear infinite<span class="token punctuation">;</span>
+                <h3 id="使用bcryptjs对nest中的密码进行加密"><a href="#使用bcryptjs对nest中的密码进行加密" class="headerlink" title="使用bcryptjs对nest中的密码进行加密"></a>使用bcryptjs对nest中的密码进行加密</h3><p>密码不能以明文形式保存到数据库中，否则数据泄露密码就会被知道。而一般的加密方式由于加密规则固定，很容易被破解，安全系数不高。密码加盐的加密方式，能很好的解决这一点。解决字典攻击的方式 是加盐。</p>
+<p>1.bcryptjs是nodejs中比较好的一款加盐(salt)加密的包.<br>2.所谓加盐.就是系统生成一串随机值,然后混入原始密码中,然后按照加密方式生成一串字符串保存在服务器。<br>3.安装</p>
+<pre class="line-numbers language-none"><code class="language-none">npm install bcryptjs
+yarn add bcryptjs
+cnpm install bcryptjs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>4.使用</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
+ * bcryptjs  加密
+ */</span>
+<span class="token keyword">const</span> bcryptjs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'bcryptjs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> password <span class="token operator">=</span> <span class="token string">'123456789'</span><span class="token punctuation">;</span>
 
-<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * 加密处理 - 同步方法
+ * bcryptjs.hashSync(data, salt)
+ *    - data  要加密的数据
+ *    - slat  用于哈希密码的盐。如果指定为数字，则将使用指定的轮数生成盐并将其使用。推荐 10
+ */</span>
 
-<span class="token atrule"><span class="token rule">@-webkit-keyframes</span> rotateVbtn1</span> <span class="token punctuation">{</span><span class="token selector">//重复旋转45度，更改成360即可重复旋转
-		0%</span> <span class="token punctuation">{</span>
-			<span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
-			<span class="token property">-moz-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
-			<span class="token property">-ms-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
-			<span class="token property">-o-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
-			<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token punctuation">}</span>
-		<span class="token selector">100%</span> <span class="token punctuation">{</span>
-			<span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-			<span class="token property">-moz-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-			<span class="token property">-ms-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-			<span class="token property">-o-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-			<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-45deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token punctuation">}</span>
-	<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">let</span> hashPassword<span class="token operator">=</span>bcryptjs<span class="token punctuation">.</span><span class="token function">hashSync</span><span class="token punctuation">(</span>password<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hasPwd<span class="token punctuation">)</span> <span class="token comment">// $2a$10$y5WA7lOVpzxVh.pqK3kUzOFZaJZXUMutvb3EG0qocgRxGcKQG36ou</span>
+
+<span class="token comment">/**
+ * 校验 - 使用同步方法
+ * bcryptjs.compareSync(data, encrypted)
+ *    - data        要比较的数据, 使用登录时传递过来的密码
+ *    - encrypted   要比较的数据, 使用从数据库中查询出来的加密过的密码
+ */</span>
+
+<span class="token keyword">let</span> comparePwd<span class="token operator">=</span>bcryptjs<span class="token punctuation">.</span><span class="token function">compareSync</span><span class="token punctuation">(</span>password<span class="token punctuation">,</span>hashPassword<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>comparePwd<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
+<span class="token keyword">let</span> comparePwd<span class="token operator">=</span>bcryptjs<span class="token punctuation">.</span><span class="token function">compareSync</span><span class="token punctuation">(</span>password<span class="token punctuation">,</span><span class="token string">'123456'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>comparePwd<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -742,7 +747,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangchuaichuai.github.io/posts/cbf7cc1c.html">https://wangchuaichuai.github.io/posts/cbf7cc1c.html</a>
+                    <a href="https://wangchuaichuai.github.io/posts/a0db594.html">https://wangchuaichuai.github.io/posts/a0db594.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1257,25 +1262,86 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/a0db594.html">
+                <a href="/posts/3217acb4.html">
                     <div class="card-image">
                         
                         
-                        <img src="http://8.142.84.52:5055/public/2.jpg" class="responsive-img" alt="使用bcryptjs对nest中的密码进行加密">
+                        <img src="http://8.142.84.52:5055/public/2.jpg" class="responsive-img" alt="react项目打包后本地运行">
                         
-                        <span class="card-title">使用bcryptjs对nest中的密码进行加密</span>
+                        <span class="card-title">react项目打包后本地运行</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用bcryptjs对nest中的密码进行加密
+                            react项目打包后本地运行
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-16
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/" class="post-category">
+                                    技术篇
+                                </a>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/%E5%AD%A6%E4%B9%A0%E7%AF%87/" class="post-category">
+                                    学习篇
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/react/">
+                        <span class="chip bg-color">react</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BB%84%E4%BB%B6/">
+                        <span class="chip bg-color">组件</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%89%93%E5%8C%85/">
+                        <span class="chip bg-color">打包</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/cbf7cc1c.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://8.142.84.52:5055/public/4.jpg" class="responsive-img" alt="css实现图片无限旋转">
+                        
+                        <span class="card-title">css实现图片无限旋转</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            css实现图片无限旋转
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1297,59 +1363,6 @@ new Valine({
                     
                     <a href="/tags/css/">
                         <span class="chip bg-color">css</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/50206a6.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="http://8.142.84.52:5055/public/1.jpg" class="responsive-img" alt="Error webpack在打包时候报operation not permitted">
-                        
-                        <span class="card-title">Error webpack在打包时候报operation not permitted</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            webpack在打包时候报operation not permitted
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-25
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/" class="post-category">
-                                    技术篇
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/React/">
-                        <span class="chip bg-color">React</span>
-                    </a>
-                    
-                    <a href="/tags/hooks/">
-                        <span class="chip bg-color">hooks</span>
                     </a>
                     
                 </div>
