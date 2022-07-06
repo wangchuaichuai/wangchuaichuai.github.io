@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>react项目打包后本地运行</title>
-      <link href="/posts/3217acb4.html"/>
-      <url>/posts/3217acb4.html</url>
+      <title>使用bcryptjs对nest中的密码进行加密</title>
+      <link href="/posts/a0db594.html"/>
+      <url>/posts/a0db594.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="react项目本地打包后直接运行"><a href="#react项目本地打包后直接运行" class="headerlink" title="react项目本地打包后直接运行"></a>react项目本地打包后直接运行</h3><p>在打包之前,在package.json中private下(位置任意)添加”homepage”: “./“</p><p>这样在你点击index.html时候路径没有问题不会报错,但是页面可能还是空白的</p><p>然后将项目中的引用路由时候的BrowserRouter改为HashRouter,所有用到的地方都要改</p><p>然后执行yarn build 或者 npm run build</p><p>再点开index.html就不会报错</p><p>原因：<br>你必须把build里的文件直接放到应用服务器的根路径下，比如，你的服务器IP是172.16.38.253，应用服务器端口为8080，你应该保证</p><p>在服务器下运行和直接打开html文件有什么区别？<br>最直接的区别，很容易注意到，一个是file协议，另一个是http协议。file协议更多的是将该请求视为一个本地资源访问请求，和你使用资源管理器打开是一样的，是纯粹的请求本地文件。而http请求方式则是通过假架设一个web服务器，解析http协议的请求然后向浏览器返回资源信息。我们所开发的html文件最后必定是会以网页的形式部署在服务器上，通过http协议访问，所以我们开发中也尽可能模拟线上环境，架设本地服务器，来避免file协议与http协议实现过程中的某些差异性，如某些API的差异、跨域请求的差异等。举个最容易验证的例子：在页面引入一张绝对路径的图片，即’/image/example.png’，然后分别通过这两种方式打开页面，file协议会将资源请求到根路径，而http协议虽然也会请求到根路径，但是是相对本地架设的服务器的根路径，一般也就是项目文件夹的路径。<br>html是运行于客户端的超文本语言，从安全性上来讲，服务端不能对客户端进行本地操作。即使有一些象cookie这类的本地操作，也是需要进行安全级别设置的。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="threejs着色器—uv动画"><a href="#threejs着色器—uv动画" class="headerlink" title="threejs着色器—uv动画"></a>threejs着色器—uv动画</h3><p>UV动画的实现方式，一种是通过Texture偏移属性offset实现UV动画，另一种方式是通过着色器代码的方式实现UV动画。</p><h4 id="Texture偏移属性offset实现UV动画"><a href="#Texture偏移属性offset实现UV动画" class="headerlink" title="Texture偏移属性offset实现UV动画"></a>Texture偏移属性offset实现UV动画</h4><p>.wrapS定义了纹理如何水平包裹，并对应于UV映射中的U.</p><p>.wrapT这定义了纹理垂直包裹的方式，与UV映射中的V相对应.</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> texture <span class="token operator">=</span> textureLoader<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token string">'./texture.png'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 设置重复的作用是：能够让一个效果循环</span>texture<span class="token punctuation">.</span>wrapS <span class="token operator">=</span> <span class="token constant">THREE</span><span class="token punctuation">.</span>RepeatWrapping<span class="token punctuation">;</span>texture<span class="token punctuation">.</span>wrapT <span class="token operator">=</span> <span class="token constant">THREE</span><span class="token punctuation">.</span>RepeatWrapping<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>渲染函数周期性执行的过程中，Three.js纹理对象Texture的偏移属性offset两个分量x和y递增或递减。</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 每次渲染对纹理对象进行偏移，不停的偏移纹理，就产生了动画的效果</span>  texture<span class="token punctuation">.</span>offset<span class="token punctuation">.</span>x <span class="token operator">-=</span> <span class="token number">0.001</span><span class="token punctuation">;</span>  texture<span class="token punctuation">.</span>offset<span class="token punctuation">.</span>y <span class="token operator">+=</span> <span class="token number">0.001</span><span class="token punctuation">;</span>  group<span class="token punctuation">.</span><span class="token function">rotateY</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">0.005</span><span class="token punctuation">)</span>  renderer<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>scene<span class="token punctuation">,</span> camera<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>render<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="着色器中uniform变量更新"><a href="#着色器中uniform变量更新" class="headerlink" title="着色器中uniform变量更新"></a>着色器中uniform变量更新</h4><p>通过自定着色器代码的方式实现UV动画，基本思路就是在片元着色器中声明一个时间变量time，然后在JavaScript代码中更新着色器中的时间变量time。时间变量time变化后，通过vec2 newT= vUv + vec2( -0.02, 0.02 ) * time;改变插值后的纹理坐标vUV，纹理坐标变化了，渲染的时候，纹理采样的结果肯定发生了变化。</p><p>片元着色器中声明的一个时间变量time</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 声明一个时间变量用来控制UV动画</span>uniform float time<span class="token punctuation">;</span><span class="token comment">// 声明一个纹理对象变量</span>uniform sampler2D texture<span class="token punctuation">;</span><span class="token comment">// 顶点片元化后有多少个片元就有多少个纹理坐标数据vUv</span>varying vec2 vUv<span class="token punctuation">;</span><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  vec2 newT<span class="token operator">=</span> vUv <span class="token operator">+</span> <span class="token function">vec2</span><span class="token punctuation">(</span> <span class="token operator">-</span><span class="token number">0.02</span><span class="token punctuation">,</span> <span class="token number">0.02</span> <span class="token punctuation">)</span> <span class="token operator">*</span> time<span class="token punctuation">;</span>  <span class="token comment">//通过偏移后的纹理坐标newT采样像素</span>  gl_FragColor <span class="token operator">=</span> <span class="token function">texture2D</span><span class="token punctuation">(</span> texture<span class="token punctuation">,</span> newT <span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 整体透明度增加</span>  gl_FragColor<span class="token punctuation">.</span>a <span class="token operator">*=</span><span class="token number">0.6</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>通过自定义着色器ShaderMaterial的属性.uniforms设置传递给片元着色器中的变量time的值</p><pre class="line-numbers language-shaders" data-language="shaders"><code class="language-shaders">uniforms: {  // 对应片元着色器中的时间变量time  time: {    value: 0.0  },},<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在渲染函数中不停地更新ShaderMaterial对象uniforms属性的时间变量time的值，每次执行新的渲染，Threejs系统会自动更新片元着色器中的时间变量time的值。</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 创建一个时钟对象T</span><span class="token keyword">var</span> <span class="token constant">T</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">THREE<span class="token punctuation">.</span>Clock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 渲染函数</span><span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 获得两次渲染的时间间隔deltaTime</span>  <span class="token keyword">var</span> deltaTime <span class="token operator">=</span> <span class="token constant">T</span><span class="token punctuation">.</span><span class="token function">getDelta</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 更新uniforms中时间，这样就可以更新着色器中time变量的值</span>  material<span class="token punctuation">.</span>uniforms<span class="token punctuation">.</span>time<span class="token punctuation">.</span>value <span class="token operator">+=</span> deltaTime<span class="token punctuation">;</span>  renderer<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>scene<span class="token punctuation">,</span> camera<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>render<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
@@ -22,11 +22,9 @@
       
         <tags>
             
-            <tag> react </tag>
+            <tag> threejs </tag>
             
-            <tag> 组件 </tag>
-            
-            <tag> 打包 </tag>
+            <tag> 3D </tag>
             
         </tags>
       
@@ -53,7 +51,42 @@
       
         <tags>
             
-            <tag> css </tag>
+            <tag> nestjs </tag>
+            
+            <tag> nodejs </tag>
+            
+            <tag> 加密 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>react项目打包后本地运行</title>
+      <link href="/posts/3217acb4.html"/>
+      <url>/posts/3217acb4.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="react项目本地打包后直接运行"><a href="#react项目本地打包后直接运行" class="headerlink" title="react项目本地打包后直接运行"></a>react项目本地打包后直接运行</h3><p>在打包之前,在package.json中private下(位置任意)添加”homepage”: “./“</p><p>这样在你点击index.html时候路径没有问题不会报错,但是页面可能还是空白的</p><p>然后将项目中的引用路由时候的BrowserRouter改为HashRouter,所有用到的地方都要改</p><p>然后执行yarn build 或者 npm run build</p><p>再点开index.html就不会报错</p><p>原因：<br>你必须把build里的文件直接放到应用服务器的根路径下，比如，你的服务器IP是172.16.38.253，应用服务器端口为8080，你应该保证</p><p>在服务器下运行和直接打开html文件有什么区别？<br>最直接的区别，很容易注意到，一个是file协议，另一个是http协议。file协议更多的是将该请求视为一个本地资源访问请求，和你使用资源管理器打开是一样的，是纯粹的请求本地文件。而http请求方式则是通过假架设一个web服务器，解析http协议的请求然后向浏览器返回资源信息。我们所开发的html文件最后必定是会以网页的形式部署在服务器上，通过http协议访问，所以我们开发中也尽可能模拟线上环境，架设本地服务器，来避免file协议与http协议实现过程中的某些差异性，如某些API的差异、跨域请求的差异等。举个最容易验证的例子：在页面引入一张绝对路径的图片，即’/image/example.png’，然后分别通过这两种方式打开页面，file协议会将资源请求到根路径，而http协议虽然也会请求到根路径，但是是相对本地架设的服务器的根路径，一般也就是项目文件夹的路径。<br>html是运行于客户端的超文本语言，从安全性上来讲，服务端不能对客户端进行本地操作。即使有一些象cookie这类的本地操作，也是需要进行安全级别设置的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术篇 </category>
+          
+          <category> 学习篇 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> react </tag>
+            
+            <tag> 组件 </tag>
+            
+            <tag> 打包 </tag>
             
         </tags>
       
