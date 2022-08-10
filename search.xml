@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>DevTools failed to load source map Could not load content for 地址</title>
+      <link href="/posts/ee96a4c5.html"/>
+      <url>/posts/ee96a4c5.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="DevTools-failed-to-load-source-map-Could-not-load-content-for-http-localhost8080-static-js-zh-cn"><a href="#DevTools-failed-to-load-source-map-Could-not-load-content-for-http-localhost8080-static-js-zh-cn" class="headerlink" title="DevTools failed to load source map Could not load content for http://localhost8080/static/js/zh_cn"></a>DevTools failed to load source map Could not load content for <a href="http://localhost8080/static/js/zh_cn">http://localhost8080/static/js/zh_cn</a></h3><p>方法一：利用浏览器禁用，但治标不治本<br>方法二：webpack.config.js或vue.config.js添加字段</p><p>方法一：</p><ol><li>浏览器打开开发者工具，点击设置</li><li>在设置界面中点击左侧导航栏的Preferences标签栏</li><li>取消勾选Sources中的Enable JavaScript source maps</li></ol><p>方法二：webpack.config.js 或者vue.config.js中添加devtool: ‘inline-source-map’,</p><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">module.exports = {configureWebpack: {devtool: 'inline-source-map'}}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 问题篇 </category>
+          
+          <category> 配置篇 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+            <tag> eslint </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue3+eslint遇到 The template root requires exactly one element.eslintvue/no-multiple-template-root ...</title>
       <link href="/posts/1d5b7024.html"/>
       <url>/posts/1d5b7024.html</url>
@@ -25,6 +54,31 @@
             <tag> vue </tag>
             
             <tag> eslint </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于node-sass安装出现command failed和Node Sass version 7.0.1 is incompatible with ^4.0.0问题</title>
+      <link href="/posts/abb935b2.html"/>
+      <url>/posts/abb935b2.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="关于node-sass安装出现command-failed和Node-Sass-version-7-0-1-is-incompatible-with-4-0-0问题"><a href="#关于node-sass安装出现command-failed和Node-Sass-version-7-0-1-is-incompatible-with-4-0-0问题" class="headerlink" title="关于node-sass安装出现command failed和Node Sass version 7.0.1 is incompatible with ^4.0.0问题"></a>关于node-sass安装出现command failed和Node Sass version 7.0.1 is incompatible with ^4.0.0问题</h3><p>说明node-sass依赖python2.x版本，之后安装python2.7.8重试了下，还是一样报错。于是尝试用按照下面命令安装</p><pre class="line-numbers language-linux/windows" data-language="linux/windows"><code class="language-linux/windows">npm i node-sass -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>但问题又来了，发现直接安装到node-sass7.0.1船新版本，并且会报</p><pre class="line-numbers language-error" data-language="error"><code class="language-error">in xxxx文件Syntax Error: Error: Node Sass version 7.0.1 is incompatible with ^4.0.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>版本7与版本4不兼容了</p><p>网上也试过了很多的方法，很多都会引发其他问题<br>最终这一种成功</p><pre class="line-numbers language-none"><code class="language-none">npm uninstall node-sass npm i sass -Dnpm run dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>通过将node-sass变成sass，最终成功运行</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 问题篇 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> package.json </tag>
             
         </tags>
       
@@ -62,9 +116,9 @@
     
     
     <entry>
-      <title>使用bcryptjs对nest中的密码进行加密</title>
-      <link href="/posts/a0db594.html"/>
-      <url>/posts/a0db594.html</url>
+      <title>threejs着色器---uv动画</title>
+      <link href="/posts/a4b3f522.html"/>
+      <url>/posts/a4b3f522.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="threejs着色器—uv动画"><a href="#threejs着色器—uv动画" class="headerlink" title="threejs着色器—uv动画"></a>threejs着色器—uv动画</h3><p>UV动画的实现方式，一种是通过Texture偏移属性offset实现UV动画，另一种方式是通过着色器代码的方式实现UV动画。</p><h4 id="Texture偏移属性offset实现UV动画"><a href="#Texture偏移属性offset实现UV动画" class="headerlink" title="Texture偏移属性offset实现UV动画"></a>Texture偏移属性offset实现UV动画</h4><p>.wrapS定义了纹理如何水平包裹，并对应于UV映射中的U.</p><p>.wrapT这定义了纹理垂直包裹的方式，与UV映射中的V相对应.</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> texture <span class="token operator">=</span> textureLoader<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token string">'./texture.png'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 设置重复的作用是：能够让一个效果循环</span>texture<span class="token punctuation">.</span>wrapS <span class="token operator">=</span> <span class="token constant">THREE</span><span class="token punctuation">.</span>RepeatWrapping<span class="token punctuation">;</span>texture<span class="token punctuation">.</span>wrapT <span class="token operator">=</span> <span class="token constant">THREE</span><span class="token punctuation">.</span>RepeatWrapping<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>渲染函数周期性执行的过程中，Three.js纹理对象Texture的偏移属性offset两个分量x和y递增或递减。</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 每次渲染对纹理对象进行偏移，不停的偏移纹理，就产生了动画的效果</span>  texture<span class="token punctuation">.</span>offset<span class="token punctuation">.</span>x <span class="token operator">-=</span> <span class="token number">0.001</span><span class="token punctuation">;</span>  texture<span class="token punctuation">.</span>offset<span class="token punctuation">.</span>y <span class="token operator">+=</span> <span class="token number">0.001</span><span class="token punctuation">;</span>  group<span class="token punctuation">.</span><span class="token function">rotateY</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">0.005</span><span class="token punctuation">)</span>  renderer<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>scene<span class="token punctuation">,</span> camera<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>render<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="着色器中uniform变量更新"><a href="#着色器中uniform变量更新" class="headerlink" title="着色器中uniform变量更新"></a>着色器中uniform变量更新</h4><p>通过自定着色器代码的方式实现UV动画，基本思路就是在片元着色器中声明一个时间变量time，然后在JavaScript代码中更新着色器中的时间变量time。时间变量time变化后，通过vec2 newT= vUv + vec2( -0.02, 0.02 ) * time;改变插值后的纹理坐标vUV，纹理坐标变化了，渲染的时候，纹理采样的结果肯定发生了变化。</p><p>片元着色器中声明的一个时间变量time</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 声明一个时间变量用来控制UV动画</span>uniform float time<span class="token punctuation">;</span><span class="token comment">// 声明一个纹理对象变量</span>uniform sampler2D texture<span class="token punctuation">;</span><span class="token comment">// 顶点片元化后有多少个片元就有多少个纹理坐标数据vUv</span>varying vec2 vUv<span class="token punctuation">;</span><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  vec2 newT<span class="token operator">=</span> vUv <span class="token operator">+</span> <span class="token function">vec2</span><span class="token punctuation">(</span> <span class="token operator">-</span><span class="token number">0.02</span><span class="token punctuation">,</span> <span class="token number">0.02</span> <span class="token punctuation">)</span> <span class="token operator">*</span> time<span class="token punctuation">;</span>  <span class="token comment">//通过偏移后的纹理坐标newT采样像素</span>  gl_FragColor <span class="token operator">=</span> <span class="token function">texture2D</span><span class="token punctuation">(</span> texture<span class="token punctuation">,</span> newT <span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 整体透明度增加</span>  gl_FragColor<span class="token punctuation">.</span>a <span class="token operator">*=</span><span class="token number">0.6</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>通过自定义着色器ShaderMaterial的属性.uniforms设置传递给片元着色器中的变量time的值</p><pre class="line-numbers language-shaders" data-language="shaders"><code class="language-shaders">uniforms: {  // 对应片元着色器中的时间变量time  time: {    value: 0.0  },},<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在渲染函数中不停地更新ShaderMaterial对象uniforms属性的时间变量time的值，每次执行新的渲染，Threejs系统会自动更新片元着色器中的时间变量time的值。</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 创建一个时钟对象T</span><span class="token keyword">var</span> <span class="token constant">T</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">THREE<span class="token punctuation">.</span>Clock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 渲染函数</span><span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 获得两次渲染的时间间隔deltaTime</span>  <span class="token keyword">var</span> deltaTime <span class="token operator">=</span> <span class="token constant">T</span><span class="token punctuation">.</span><span class="token function">getDelta</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 更新uniforms中时间，这样就可以更新着色器中time变量的值</span>  material<span class="token punctuation">.</span>uniforms<span class="token punctuation">.</span>time<span class="token punctuation">.</span>value <span class="token operator">+=</span> deltaTime<span class="token punctuation">;</span>  renderer<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>scene<span class="token punctuation">,</span> camera<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>render<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
